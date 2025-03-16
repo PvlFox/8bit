@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css"> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>KeygenMusic</title>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="rainbow-text">KEYGEN MUSIC</h1>
+
+      <div class="card">
+        <div class="card-header">
+          <a
+            href="https://drive.google.com/file/d/1PPKXXwU3piN4JEHWHbNILup6Doj9qY4G/view?usp=drive_link"
+            class="download"
+          >
+            <img src="download.png" alt="Download Button" draggable="false" />
+            <span class="download-text">Songs Download</span>
+          </a>
+          <div class="info">
+            <div class="field group">
+              <label for="group">Group</label>
+              <span id="group">CS-106(c)</span>
+            </div>
+            <div class="field">
+              <label for="name">ID</label>
+              <span id="name">Maxim Mikhaylov</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-body">
+          <div id="trackInfo">
+            Current Track: <span id="currentTrackName"></span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="actions">
+            <button id="pauseButton" onclick="togglePause()">Pause</button>
+            <button id="centeredButton" onclick="toggleMusic()">
+              Generate
+            </button>
+          </div>
+          <div class="volume-control">
+            <label for="volumeSlider" id="volumeLabel">vol</label>
+            <input
+              type="range"
+              id="volumeSlider"
+              min="0"
+              max="1"
+              step="0.1"
+              value="1"
+              oninput="changeVolume()"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "8BITWONDERNominal";
+    src: url("8bit-wonder-nominal.ttf");
+  }
+
+  * {
+    box-sizing: border-box;
+    font-family: "8BITWONDERNominal", "Times New Roman", Times, serif;
+  }
+
+  body {
+    background-color: rgb(59, 59, 59);
+    background-image: url("background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rainbow-text {
+    font-size: 4rem;
+    user-select: none;
+    color: transparent;
+    text-align: center;
+    background-clip: text;
+    animation: rainbowText 5s infinite linear;
+    text-shadow: 5 5 10px rgba(0, 0, 0, 0.5);
+    margin: 1rem 0;
+  }
+
+  @keyframes rainbowText {
+    0% {
+      color: #ff595e;
+    }
+    16.666% {
+      color: #fdc62e;
+    }
+    33.333% {
+      color: #8ac926;
+    }
+    50% {
+      color: #1982c4;
+    }
+    66.666% {
+      color: #6a4c93;
+    }
+    100% {
+      color: #ff595e;
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem 3rem;
+    background-image: url(./window.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: clamp(400px, 80vw, 706px);
+    height: clamp(270px, 80vh, 627px);
+    row-gap: 1.5rem;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+
+  .card .card-header .download {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.5rem;
+    transition: transform 150ms ease;
+  }
+
+  .card .card-header .download:active {
+    transform: scale(0.9);
+  }
+
+  .card .card-header .download img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .download-text {
+    font-size: 0.75rem;
+    color: #8cc7ff;
+    user-select: none;
+    text-align: center;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 0.5rem;
+  }
+
+  .info .field {
+    display: flex;
+    align-items: center;
+    column-gap: 0.4rem;
+  }
+
+  .info .field label {
+    font-size: 0.875rem;
+    color: #8e81ff;
+  }
+
+  .info .field.group label {
+    color: #f32987;
+  }
+
+  .info .field :last-child {
+    font-size: 0.875rem;
+    background-color: #1f1746;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 6px;
+    color: #eee;
+  }
+
+  .info .field .group :last-child {
+    color: #8cc7ff;
+    letter-spacing: 0.05rem;
+    font-size: 12px;
+  }
+
+  .card .card-body #trackInfo {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.875rem;
+    color: #e4e4e4;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background-color: #1f1746;
+  }
+
+  .card .card-body #currentTrackName {
+    font-weight: 700;
+    color: #8ef5ad;
+  }
+
+  .card .card-footer {
+    display: flex;
+    column-gap: 2.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .card .card-footer .actions {
+    display: flex;
+    column-gap: 0.5rem;
+    align-items: center;
+    justify-content: stretch;
+  }
+
+  .card .card-footer .actions button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 0.875rem;
+    border-radius: 5px;
+    background-color: #f32987;
+    color: #ececec;
+    transition-property: background-color color;
+    transition-duration: 150ms;
+    transition-timing-function: ease;
+    padding: 10px 30px;
+  }
+
+  .card .card-footer .actions button:active {
+    background-color: #c02374;
+    color: #fff;
+  }
+
+  .card .card-footer .volume-control {
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+  }
+
+  .card .card-footer .volume-control label {
+    font-size: 0.875rem;
+    user-select: none;
+    color: #8cc7ff;
+  }
+
+  @media screen and (max-width: 766px) {
+    .rainbow-text {
+      font-size: 2.5rem;
+      margin: 1rem;
+    }
+
+    .card {
+      height: 80vh;
+    }
+
+    .card .card-footer {
+      align-items: stretch;
+      flex-direction: column;
+      row-gap: 0.5rem;
+    }
+
+    .card .card-footer .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .card .card-footer .volume-control {
+      align-self: center;
+    }
+  }
+
+ 
